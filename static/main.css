@@ -1,0 +1,45 @@
+body {
+    background-color: #e6fff2;
+    margin: 0 auto
+}
+
+h1,
+h4 { 
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+}
+
+.container,
+#btn-row {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+tr, 
+td,
+th {
+    padding: 10px 20px 10px 5px;
+}
+
+input, 
+textarea,
+select {
+    background-color:  #ffffe6;
+}
+
+textarea {
+    padding: 15px;
+}
+
+#submit-btn {
+    color: white;
+    box-shadow: 10px 10px 5px gray;
+    background-color:
+    #b3b300;
+    padding: 10px 20px;
+    width: 100%;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Survey</title>
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Dojo Survey</h1>
+        <form id="survey-form" action='/process', method='POST')>
+            <div class="form-group row">
+                <label class="col-md-4 col-form-label" for='name'>Name:</label>
+                <input class="col-md-8 form-control-md" type='text' name='name'>
+            </div>
+            
+            <div class="form-group row">
+            <label class="col-md-4 col-form-label" for='email'>Email:</label>
+            <input class="col-md-8 form-control-md" type='text' name='email'>
+            </div>
+
+            <div class="form-group row">
+            <label  class="col-md-4 col-form-label" for="location" name="location">Dojo Location</label>
+            <select class="col-md-8 form-control-md" name="location">
+                <option value="Berkeley">Berkeley</option>
+                <option value="Boise">Boise</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Seattle">Seattle</option></option>
+                <option value="Los Angeles">Los Angeles</option></option>
+                <option value="Orange County">Orange County</option>
+            </select>
+            </div>
+
+            <div class="form-group row">
+            <label class="col-md-4 col-form-label" for="language">Language of Love</label>
+            <select class="col-md-8 form-control-md " name="language">
+                <option value="Haskell">Haskell</option>
+                <option value="javascript">Java</option>
+                <option value="Javascript">JavaScript</option>
+                <option value="Plutus">Plutus</option>
+                <option value="Python">Python</option>
+                <option value="Rust">Rust</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Scala">Scala</option>
+
+            </select>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-md-4 col-form-label" for="comments">If your dog could code what app would they build?</label>
+                <textarea name="comments" class="col-md-8" rows="10"></textarea>
+            </div>
+            <div class="col-md-4 form-group row"></div>
+            <div id="btn-row" class="form-group row">
+            <input id="submit-btn" class="col-md-4 form-control-md" type='submit' value='Submit'>
+            </div>
+
+    </form> 
+</div>
+    
+</body>
+</html>
