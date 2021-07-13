@@ -4,14 +4,13 @@ app = Flask(__name__)
 app.secret_key = 'Wonder World'# set a secret key for security purposes
 
 
-# write info to session in this method- aka get data to store
 @app.route('/')
 def survey():
     return render_template('index.html')
 
-
+#write data to session
 @app.route('/process', methods=['POST'])
-def get_survey():
+def process():
     print("Got Post Info")
     session['name'] = request.form['name']
     session['email'] = request.form['email']
@@ -21,7 +20,7 @@ def get_survey():
 
     return redirect('/results')
 
-#session data is available directly in our templates
+#session data is available results template
 @app.route('/results')
 def show_data():
     return render_template('results.html')

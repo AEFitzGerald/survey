@@ -11,7 +11,7 @@
 
 
 <body>
-    <div class="container">
+    <div class="container d-flex-column justify-content-center">
         <h1>Dojo Survey</h1>
         <form id="survey-form" action='/process', method='POST')>
             <div class="form-group row">
@@ -55,9 +55,9 @@
                 <label class="col-md-4 col-form-label" for="comments">If your dog could code what app would they build?</label>
                 <textarea name="comments" class="col-md-8" rows="10"></textarea>
             </div>
-            <div class="col-md-4 form-group row"></div>
-            <div id="btn-row" class="form-group row">
-            <input id="submit-btn" class="col-md-4 form-control-md" type='submit' value='Submit'>
+
+            <div id="btn-row">
+            <input id="submit-btn" class="form-control d-flex-justify-content-lg-end" type='submit' value='Submit'>
             </div>
 
     </form> 
